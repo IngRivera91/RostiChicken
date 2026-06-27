@@ -1,0 +1,313 @@
+/* ==========================================================
+   Proyecto: RostiChicken
+   Archivo: hero.css
+   ----------------------------------------------------------
+   Estilos del Hero.
+========================================================== */
+
+/*==========================================================
+HERO
+==========================================================*/
+
+.hero{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    padding:0;
+
+}
+
+/*==========================================================
+SLIDER
+==========================================================*/
+
+.hero-slider{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+}
+
+.hero-slide{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity 1.2s ease;
+
+}
+
+.hero-slide.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.hero-slide img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    animation:kenBurns 18s ease-in-out infinite alternate;
+
+}
+
+/*==========================================================
+OVERLAY
+==========================================================*/
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    background:linear-gradient(
+            to bottom,
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.70),
+            rgba(0,0,0,.88)
+    );
+
+}
+
+/*==========================================================
+CONTENIDO
+==========================================================*/
+
+.hero .container{
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+.hero-content{
+
+    max-width:700px;
+
+    color:var(--white);
+
+    animation:fadeUp .8s ease;
+
+}
+
+.hero-subtitle{
+
+    display:inline-block;
+
+    margin-bottom:1rem;
+
+    color:var(--primary);
+
+    font-size:var(--font-size-lg);
+
+    font-weight:var(--font-semibold);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+}
+
+.hero h1{
+
+    margin-bottom:1.5rem;
+
+    text-shadow:0 6px 20px rgba(0,0,0,.35);
+
+}
+
+.hero p{
+
+    max-width:600px;
+
+    margin-bottom:2rem;
+
+    color:var(--white);
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+}
+
+/*==========================================================
+BOTONES
+==========================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+/*==========================================================
+INDICADORES
+==========================================================*/
+
+.hero-dots{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:40px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:.75rem;
+
+    z-index:5;
+
+}
+
+.hero-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.hero-dot.active{
+
+    background:var(--primary);
+
+    transform:scale(1.2);
+
+}
+
+/*==========================================================
+SCROLL INDICATOR
+==========================================================*/
+
+.hero-scroll{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:30px;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+    color:var(--white);
+
+    font-size:2rem;
+
+    animation:float 2s ease-in-out infinite;
+
+}
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media (max-width:992px){
+
+    .hero{
+
+        min-height:90vh;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        margin:0 auto;
+
+    }
+
+    .hero-subtitle{
+
+        letter-spacing:2px;
+
+        font-size:var(--font-size-md);
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .hero{
+
+        min-height:100vh;
+
+    }
+
+    .hero h1{
+
+        margin-bottom:1rem;
+
+    }
+
+    .hero p{
+
+        margin-bottom:1.75rem;
+
+    }
+
+}

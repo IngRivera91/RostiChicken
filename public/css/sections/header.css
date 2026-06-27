@@ -1,0 +1,252 @@
+/* ==========================================================
+   Proyecto: RostiChicken
+   Archivo: header.css
+   ----------------------------------------------------------
+   Estilos del Header.
+========================================================== */
+
+/*==========================================================
+HEADER
+==========================================================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:var(--header-height);
+
+    display:flex;
+
+    align-items:center;
+
+    z-index:var(--z-header);
+
+    background:transparent;
+
+    transition:var(--transition);
+
+}
+
+.header.scrolled{
+
+    background:rgba(15,15,15,.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/*==========================================================
+CONTENEDOR
+==========================================================*/
+
+.header .container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:2rem;
+
+}
+
+/*==========================================================
+LOGO
+==========================================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.logo img{
+
+    height:58px;
+
+    width:auto;
+
+}
+
+/*==========================================================
+NAVEGACIÓN
+==========================================================*/
+
+.nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2rem;
+
+    margin-left:auto;
+
+}
+
+.nav a{
+
+    position:relative;
+
+    color:var(--white);
+
+    font-size:var(--font-size-md);
+
+    font-weight:var(--font-medium);
+
+}
+
+.nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:var(--transition);
+
+}
+
+.nav a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav a:hover::after{
+
+    width:100%;
+
+}
+
+/*==========================================================
+BOTÓN WHATSAPP
+==========================================================*/
+
+.btn-whatsapp{
+
+    margin-left:1rem;
+
+}
+
+/*==========================================================
+BOTÓN MENÚ
+==========================================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:48px;
+
+    height:48px;
+
+    color:var(--white);
+
+    font-size:2rem;
+
+}
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media (max-width:992px){
+
+    .btn-whatsapp{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+    .nav{
+
+        position:fixed;
+
+        top:var(--header-height);
+
+        right:-100%;
+
+        width:280px;
+
+        height:calc(100vh - var(--header-height));
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        align-items:flex-start;
+
+        gap:0;
+
+        padding:2rem;
+
+        background:var(--background-light);
+
+        box-shadow:var(--shadow-lg);
+
+        transition:var(--transition);
+
+    }
+
+    .nav.active{
+
+        right:0;
+
+    }
+
+    .nav a{
+
+        width:100%;
+
+        padding:1rem 0;
+
+        border-bottom:1px solid var(--border);
+
+    }
+
+    .logo img{
+
+        height:50px;
+
+    }
+
+}

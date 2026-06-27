@@ -1,3 +1,14 @@
+/* ==========================================================
+   Proyecto: RostiChicken
+   Archivo: style.css
+   ----------------------------------------------------------
+   Hoja de estilos principal.
+   ========================================================== */
+
+/*==========================================================
+BASE
+==========================================================*/
+
 @import url("base/variables.css");
 
 @import url("base/reset.css");
@@ -8,10 +19,16 @@
 
 @import url("base/animations.css");
 
+/*==========================================================
+SECTIONS
+==========================================================*/
+
 @import url("sections/header.css");
 
 @import url("sections/hero.css");
 
 @import url("sections/menu.css");
+
+@import url("sections/promotions.css");
 
 @import url("sections/footer.css");
