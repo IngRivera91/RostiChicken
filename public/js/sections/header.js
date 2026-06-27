@@ -1,33 +1,62 @@
-function initHeader(){
+/**
+ * ==========================================================
+ * Proyecto: RostiChicken
+ * Archivo: header.js
+ * ----------------------------------------------------------
+ * Comportamiento del Header.
+ * ==========================================================
+ */
 
-    const toggle=document.getElementById("menuToggle");
+const initHeader = () => {
 
-    const nav=document.getElementById("nav");
+    const header = document.querySelector('.header');
 
-    const header=document.querySelector(".header");
+    const menu = document.querySelector('.nav');
 
-    if(toggle){
+    const toggle = document.querySelector('.menu-toggle');
 
-        toggle.addEventListener("click",()=>{
+    if (!header) {
+        return;
+    }
 
-            nav.classList.toggle("active");
+    const updateHeader = () => {
+
+        if (window.scrollY > 40) {
+
+            header.classList.add('scrolled');
+
+        } else {
+
+            header.classList.remove('scrolled');
+
+        }
+
+    };
+
+    updateHeader();
+
+    window.addEventListener('scroll', updateHeader);
+
+    if (toggle && menu) {
+
+        toggle.addEventListener('click', () => {
+
+            menu.classList.toggle('active');
+
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                menu.classList.remove('active');
+
+            });
 
         });
 
     }
 
-    window.addEventListener("scroll",()=>{
+};
 
-        if(window.scrollY>40){
-
-            header.classList.add("scrolled");
-
-        }else{
-
-            header.classList.remove("scrolled");
-
-        }
-
-    });
-
-}
+document.addEventListener('DOMContentLoaded', initHeader);

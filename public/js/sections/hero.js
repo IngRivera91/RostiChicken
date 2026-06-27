@@ -1,23 +1,50 @@
-function initHero(){
+/**
+ * ==========================================================
+ * Proyecto: RostiChicken
+ * Archivo: hero.js
+ * ----------------------------------------------------------
+ * Slider del Hero.
+ * ==========================================================
+ */
 
-    const slides=document.querySelectorAll(".hero-slide");
+const initHero = () => {
 
-    if(slides.length<=1){
+    const slides = document.querySelectorAll('.hero-slide');
 
+    if (!slides.length) {
         return;
-
     }
 
-    let current=0;
+    let current = 0;
 
-    setInterval(()=>{
+    const showSlide = index => {
 
-        slides[current].classList.remove("active");
+        slides.forEach((slide, i) => {
 
-        current=(current+1)%slides.length;
+            slide.classList.toggle('active', i === index);
 
-        slides[current].classList.add("active");
+        });
 
-    },5000);
+    };
 
-}
+    const nextSlide = () => {
+
+        current++;
+
+        if (current >= slides.length) {
+
+            current = 0;
+
+        }
+
+        showSlide(current);
+
+    };
+
+    showSlide(current);
+
+    setInterval(nextSlide, 5000);
+
+};
+
+document.addEventListener('DOMContentLoaded', initHero);

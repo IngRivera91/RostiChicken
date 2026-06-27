@@ -24,7 +24,7 @@ $promotions = [
 
         'price' => 199,
 
-        'image' => 'promotions/martes-alitas.webp'
+        'image' => 'promotions/promo-martes.png'
     ],
 
     [
@@ -36,7 +36,7 @@ $promotions = [
 
         'price' => 249,
 
-        'image' => 'promotions/jueves-boneless.webp'
+        'image' => 'promotions/promo-jueves.png'
     ],
 
     [
@@ -48,7 +48,7 @@ $promotions = [
 
         'price' => 409,
 
-        'image' => 'promotions/cubeta-rosti.webp'
+        'image' => 'promotions/promo-cubeta.png'
     ],
 
     [
@@ -60,7 +60,7 @@ $promotions = [
 
         'price' => 150,
 
-        'image' => 'promotions/cubetazo.webp',
+        'image' => 'promotions/promo-cubetazo.png',
 
         'featured' => true
     ]

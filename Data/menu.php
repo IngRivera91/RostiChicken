@@ -33,7 +33,7 @@ $menu = [
         [
             'id'    => 'alitas',
             'title' => 'Alitas',
-            'image' => 'categories/alitas.webp',
+            'image' => 'categories/alitas.png',
             'showSauces' => true,
 
             'products' => [
@@ -60,7 +60,7 @@ $menu = [
         [
             'id'    => 'boneless',
             'title' => 'Boneless',
-            'image' => 'categories/boneless.webp',
+            'image' => 'categories/boneless.png',
             'showSauces' => true,
 
             'products' => [
@@ -90,7 +90,7 @@ $menu = [
         [
             'id'    => 'hamburguesas',
             'title' => 'Hamburguesas',
-            'image' => 'categories/hamburguesas.webp',
+            'image' => 'categories/hamburguesas.png',
 
             'products' => [
 
@@ -133,7 +133,7 @@ $menu = [
         [
             'id'    => 'carnes',
             'title' => 'Carnes',
-            'image' => 'categories/carnes.webp',
+            'image' => 'categories/carnes.png',
 
             'products' => [
 
@@ -165,7 +165,7 @@ $menu = [
         [
             'id'    => 'entradas',
             'title' => 'Entradas',
-            'image' => 'categories/entradas.webp',
+            'image' => 'categories/entradas.png',
 
             'products' => [
 
@@ -201,7 +201,7 @@ $menu = [
         [
             'id'    => 'cervezas',
             'title' => 'Cervezas',
-            'image' => 'categories/cervezas.webp',
+            'image' => 'categories/cervezas.png',
 
             'products' => [
 
@@ -242,7 +242,7 @@ $menu = [
         [
             'id'    => 'bebidas',
             'title' => 'Bebidas',
-            'image' => 'categories/bebidas.webp',
+            'image' => 'categories/bebidas.png',
 
             'products' => [
 
