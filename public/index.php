@@ -1,21 +1,12 @@
 <?php
-require_once __DIR__.'/../includes/config.php';
-require_once __DIR__.'/../includes/header.php';
-?>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Landing Base</h1>
+define('APP_INIT', true);
 
-            <p>
-                Tu contenido comienza aquí.
-            </p>
+require_once '../includes/config.php';
+require_once '../includes/functions.php';
 
-            <a href="#contacto" class="btn">
-                Contáctanos
-            </a>
-        </div>
-    </section>
+include '../includes/header.php';
+include '../includes/hero.php';
+include '../includes/menu.php';
 
-<?php
-require_once __DIR__.'/../includes/footer.php';
+include '../includes/footer.php';

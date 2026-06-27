@@ -1,0 +1,224 @@
+/* ==========================================================
+Proyecto: RostiChicken
+Archivo: typography.css
+-----------------------
+
+Tipografía global.
+========================================================== */
+
+html{
+
+    font-size:16px;
+
+}
+
+body{
+
+    font-family:var(--font-family);
+
+    font-size:var(--font-size-md);
+
+    font-weight:var(--font-regular);
+
+    line-height:1.6;
+
+    color:var(--text);
+
+    background:var(--background);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color:var(--white);
+
+    font-weight:var(--font-bold);
+
+    line-height:1.2;
+
+}
+
+h1{
+
+    font-size:clamp(2.5rem,6vw,4.5rem);
+
+}
+
+h2{
+
+    font-size:clamp(2rem,5vw,3.25rem);
+
+}
+
+h3{
+
+    font-size:clamp(1.5rem,3vw,2.25rem);
+
+}
+
+h4{
+
+    font-size:1.25rem;
+
+}
+
+h5{
+
+    font-size:1.125rem;
+
+}
+
+h6{
+
+    font-size:1rem;
+
+}
+
+p{
+
+    color:var(--text-light);
+
+    margin-bottom:var(--space-md);
+
+}
+
+strong{
+
+    font-weight:var(--font-bold);
+
+}
+
+small{
+
+    font-size:var(--font-size-sm);
+
+}
+
+a{
+
+    transition:var(--transition);
+
+}
+
+a:hover{
+
+    color:var(--primary);
+
+}
+
+/*==========================================================
+SECCIONES
+==========================================================*/
+
+.section-header{
+
+    max-width:800px;
+
+    margin:0 auto var(--space-2xl);
+
+    text-align:center;
+
+}
+
+.section-subtitle{
+
+    display:inline-block;
+
+    margin-bottom:var(--space-sm);
+
+    color:var(--primary);
+
+    font-size:var(--font-size-sm);
+
+    font-weight:var(--font-semibold);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+}
+
+.section-title{
+
+    margin-bottom:var(--space-md);
+
+}
+
+.section-description{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+}
+
+/*==========================================================
+BADGES
+==========================================================*/
+
+.badge-new{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:.35rem .8rem;
+
+    border-radius:var(--radius-round);
+
+    background:var(--secondary);
+
+    color:var(--white);
+
+    font-size:.75rem;
+
+    font-weight:var(--font-semibold);
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+/*==========================================================
+PRECIOS
+==========================================================*/
+
+.menu-product-price,
+
+.promotion-price{
+
+    color:var(--primary);
+
+    font-size:1.5rem;
+
+    font-weight:var(--font-bold);
+
+}
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media (max-width:768px){
+
+    body{
+
+    font-size:.95rem;
+
+}
+
+    .section-header{
+
+        margin-bottom:var(--space-xl);
+
+    }
+
+}

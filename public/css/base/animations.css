@@ -1,0 +1,310 @@
+/* ==========================================================
+   Proyecto: RostiChicken
+   Archivo: animations.css
+   ----------------------------------------------------------
+   Animaciones globales.
+========================================================== */
+
+/*==========================================================
+TRANSICIONES GENERALES
+==========================================================*/
+
+*{
+
+    transition:
+            background-color var(--transition),
+            color var(--transition),
+            border-color var(--transition),
+            transform var(--transition),
+            opacity var(--transition),
+            box-shadow var(--transition);
+
+}
+
+/*==========================================================
+FADE IN
+==========================================================*/
+
+.fade-in{
+
+    opacity:0;
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/*==========================================================
+FADE UP
+==========================================================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+ZOOM IN
+==========================================================*/
+
+.zoom-in{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+    animation:zoomIn .7s ease forwards;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+KEN BURNS
+==========================================================*/
+
+.ken-burns{
+
+    animation:kenBurns 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes kenBurns{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+/*==========================================================
+FLOAT
+==========================================================*/
+
+.float{
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==========================================================
+PULSE
+==========================================================*/
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==========================================================
+ROTATE
+==========================================================*/
+
+.rotate{
+
+    animation:rotate 15s linear infinite;
+
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*==========================================================
+HOVER LIFT
+==========================================================*/
+
+.hover-lift{
+
+    transition:var(--transition);
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*==========================================================
+HOVER SCALE
+==========================================================*/
+
+.hover-scale{
+
+    transition:var(--transition);
+
+}
+
+.hover-scale:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==========================================================
+HOVER SHADOW
+==========================================================*/
+
+.hover-shadow{
+
+    transition:var(--transition);
+
+}
+
+.hover-shadow:hover{
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/*==========================================================
+BOTONES
+==========================================================*/
+
+.btn:active{
+
+    transform:scale(.98);
+
+}
+
+/*==========================================================
+RESPETAR USUARIOS CON REDUCCIÓN DE MOVIMIENTO
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

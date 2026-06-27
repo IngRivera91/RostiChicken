@@ -1,1 +1,5 @@
-console.log("Landing iniciada");
+initHeader();
+
+initHero();
+
+initMenu();
