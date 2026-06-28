@@ -45,7 +45,9 @@ function config(string $key, mixed $default = null): mixed
  */
 function asset(string $path): string
 {
-    return 'img/' . ltrim($path, '/');
+    return ltrim($path, '/')
+        . '?v='
+        . urlencode(config('site.version', '1.0.0'));
 }
 
 /**
