@@ -57,7 +57,7 @@ $config = [
     */
 
     'seo' => [
-        'title'       => 'RostiChicken | Restaurante Bar',
+        'title'       => 'Demo Alitas',
         'description' => 'Las mejores hamburguesas, alitas, carnes y bebidas.',
         'keywords'    => 'hamburguesas, alitas, carnes, cerveza, restaurante, bar',
         'author'      => 'IngRivera',
